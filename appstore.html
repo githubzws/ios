@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>  
+    <meta charset="UTF-8">
+    <title>Ad Hoc .ipa在线安装</title>
+</head>
+<body>
+	<div>
+		<button onclick="downloadClientApp();">
+			<a href="javascript:void(0);">ios客户端下载</a>
+		</button>
+		<div>
+			<button>
+				<a href="https://pro.****.com.cn:30010/androidApp.apk" id="btn-android-download">Android客户端下载</a>
+			</button>
+		</div>
+
+		<div>
+			<strong>微信扫描</strong>下载,<strong>请点击右上角</strong>,<br />选择“<strong>在浏览器中打开</strong>”即可安装下载
+		</div>
+	</div>
+
+    <script>
+        var downloadClientApp = function() {
+            // 在此用到配置文件(Mytest.plist)的外部链接
+            window.location.href='itms-services:///?action=download-manifest&url=https://pro.****.com.cn:30010/myapp.plist';
+        }
+		
+    </script>
+</body>
+</html>
